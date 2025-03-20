@@ -1,0 +1,78 @@
+<style>
+  .subscribe-button {
+    background-color: rgb(201, 5, 5);
+    color: white;
+    border: none;
+    height: 35px;
+    width: 100px;
+    border-radius: 2px;
+    cursor: pointer;
+    margin-right: 8px;
+    transition: opacity 0.15s;
+    /* Now transition smoothly hoga. aur ise yahin likhna chahiye not in .subscribe-button:hover becz if we do that then jab tak hover hoga tab tak transition valid so jab remove karenge cursor button ke upar se tab nahi ho payega transition. */
+  }
+
+  /* Hover is called psuedo class as it takes effect in addition to default behaviour(when not hovering). */
+  .subscribe-button:hover {
+    opacity: 0.7;
+    /* opacity sets the visibility of whole thing. range 0 to 1 */
+  }
+
+  /* active takes effect as long as clicked(when click is over it is done) */
+  .subscribe-button:active {
+    opacity: 0.3;
+  }
+
+  .join-button {
+    background-color: white;
+    color: rgb(77, 77, 196);
+    border-color: rgb(77, 77, 196);
+    border-style: solid;
+    border-width: 1px;
+    height: 36px;
+    width: 62px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.15s,
+      color 0.15s;
+
+  }
+
+  .join-button:hover {
+    background-color: rgb(77, 77, 196);
+    color: white;
+  }
+
+  .join-button:active {
+    opacity: 0.7;
+  }
+
+  .tweet-button {
+    background-color: rgb(2, 158, 255);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 74px;
+    border-radius: 8px;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: box-shadow 0.15s;
+  }
+
+  .tweet-button:hover {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+    /* first is horizontal offset of shadow(+ve value is right, -ve value is left)
+        second is vertical offset of shadow
+        third is blur radius around the shadow
+        Now rgba has 4 properties->
+        First 3 are normal colors of the shadow
+        a property(4th wali) is the opacity of the color(shadow here) */
+  }
+</style>
+
+<button class="subscribe-button">SUBSCRIBE</button>
+<button class="join-button">JOIN</button>
+<button class="tweet-button">Tweet</button>
